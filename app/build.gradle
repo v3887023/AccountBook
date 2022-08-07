@@ -16,6 +16,24 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        debugConfig {
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASSWORD
+            storeFile file(STORE_FILE_PATH)
+            storePassword STORE_PASSWEORD
+            v2SigningEnabled true
+
+        }
+        releaseConfig {
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASSWORD
+            storeFile file(STORE_FILE_PATH)
+            storePassword STORE_PASSWEORD
+            v2SigningEnabled true
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
